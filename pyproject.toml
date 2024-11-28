@@ -1,0 +1,18 @@
+[project]
+name = "litellm-test"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Jens X Augustsson", email = "jens@augustson.eu"},
+]
+dependencies = ["litellm[proxy]>=1.53.1"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+docker = "docker run -v ./config.yaml:/app/config.yaml -e OPENAI_API_KEY=${OPENAI_API_KEY} -p 4000:4000 ghcr.io/berriai/litellm:main-latest --config /app/config.yaml --detailed_debug"
