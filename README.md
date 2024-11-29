@@ -16,11 +16,11 @@ Start LiteLLM in Docker with 'config.yaml':
 pdm run docker
 ```
 
-Call OpenAPI and Ollama through LiteLLM:
+Call OpenAPI and Ollama through LiteLLM proxy using OpenAI python package:
 ```
 pdm run test_litellm.py
 ```
-Or call OpenAI and Ollama without LiteLLM:
+Or call OpenAI and Ollama without LiteLLM proxy using LiteLLM python package:
 ```
 pdm run test_local.py
 ```
