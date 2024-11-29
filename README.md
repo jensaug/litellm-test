@@ -1,5 +1,7 @@
 # litellm-test
 
+Access OpenAI and Ollama models behind a LiteLLM proxy
+
 ## Configuration
 
 * 'OPENAI_API_KEY' environment variable must be set
