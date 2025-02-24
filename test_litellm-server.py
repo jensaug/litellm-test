@@ -8,7 +8,7 @@ response = client.chat.completions.create(model="gpt-3.5-turbo-instruct", messag
         "content": "this is a test request, write a short poem"
     }
 ])
-print("OpenAI:\n", response.choices[0].message.content)
+print("LiteLLM using OpenAI model:\n", response.choices[0].message.content)
 
 # request to Ollama model
 response = client.chat.completions.create(model="mistral-7b", messages = [
@@ -17,6 +17,6 @@ response = client.chat.completions.create(model="mistral-7b", messages = [
         "content": "this is a test request, write a short poem"
     }
 ])
-print("Ollama:\n", response.choices[0].message.content)
+print("LiteLLM using Ollama model:\n", response.choices[0].message.content)
 
 

@@ -4,9 +4,13 @@ version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Jens X Augustsson", email = "jens@augustson.eu"},
+    {name = "Jens X Augustsson", email = "jens@omniville.se"},
 ]
-dependencies = ["litellm[proxy]>=1.53.1"]
-requires-python = "==3.12.*"
+dependencies = [
+    "litellm[proxy]>=1.53.1",
+    "openai>=1.64.0",
+]
+requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
 
