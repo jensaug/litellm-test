@@ -1,4 +1,8 @@
 model_list:
+  - model_name: mistral:latest
+    litellm_params:
+      model: ollama/mistral:latest
+      api_base: http://0.0.0.0:11434
   - model_name: gpt-4o
     litellm_params:
       model: openai/gpt-4o                          # The `openai/` prefix will call openai.chat.completions.create
@@ -7,7 +11,3 @@ model_list:
     litellm_params:
       model: text-completion-openai/gpt-3.5-turbo-instruct # The `text-completion-openai/` prefix will call openai.completions.create
       api_key: os.environ/OPENAI_API_KEY
-  - model_name: mistral-7b
-    litellm_params:
-      model: ollama/mistral:7b
-      api_base: http://192.168.50.105:11434
