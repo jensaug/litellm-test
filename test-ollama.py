@@ -8,7 +8,7 @@ response = client.chat.completions.create(model="mistral", messages = [
         "content": "this is a test request, write a short poem"
     }
 ])
-print("Ollama Mistral via OpenAI API:\n", response.choices[0].message.content)
+print("\nOllama Mistral via OpenAI API:\n", response.choices[0].message.content)
 
 # request to Ollama model (deepseek)
 response = client.chat.completions.create(model="deepseek-r1:14b", messages = [
@@ -17,4 +17,4 @@ response = client.chat.completions.create(model="deepseek-r1:14b", messages = [
         "content": "this is a test request, write a short poem"
     }
 ])
-print("Ollama Deepseek via OpenAI API:\n", response.choices[0].message.content)
+print("\nOllama Deepseek via OpenAI API:\n", response.choices[0].message.content)
