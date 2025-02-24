@@ -1,6 +1,9 @@
 # open-webui serve
+import os
 import openai # openai v1.0.0+
-client = openai.OpenAI(api_key="sk-69eb7ea994234505ab2b776eb94ce523",base_url="http://0.0.0.0:8080/api") # Open-WebUI url
+
+api_key=os.getenv("OPENWEBUI_API_KEY")
+client = openai.OpenAI(api_key=api_key, base_url="http://0.0.0.0:8080/api") # Open-WebUI url
 
 # request to Ollama model (mistral)
 response = client.chat.completions.create(model="mistral:latest", messages = [
