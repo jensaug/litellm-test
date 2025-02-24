@@ -1,5 +1,5 @@
 import openai # openai v1.0.0+
-client = openai.OpenAI(api_key="sk-1234",base_url="http://0.0.0.0:11434/v1") # Ollama_url
+client = openai.OpenAI(api_key="kalle",base_url="http://0.0.0.0:11434/v1") # Ollama_url
 
 # request to Ollama model (mistral)
 response = client.chat.completions.create(model="mistral", messages = [
