@@ -1,3 +1,4 @@
+# litellm --config ~/github/jensaug/litellm-test/config.yaml
 import openai # openai v1.0.0+
 client = openai.OpenAI(api_key="sk-1234",base_url="http://0.0.0.0:4000") # set proxy to base_url
 
