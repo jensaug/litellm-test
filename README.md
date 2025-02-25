@@ -1,15 +1,25 @@
-# litellm-test
+# local-llm-demo
 
-Access OpenAI and Ollama models behind a LiteLLM proxy
+This code demonstrates Python client access to locally installed:
+* Ollama
+* Open WebUI
+* LiteLLM Proxy Server
+* LiteLLM Python SDK
+* LocalAI
+* OpenAI Functions API
+
+The code complements [Google Slides "Demo Local LLM"](https://docs.google.com/presentation/d/1JeQcU1jfNWLBcyfsrk7gG2JNs6JyTrCgNNvQwJgXPVA/edit?usp=sharing)
 
 ## Configuration
 
 * 'OPENAI_API_KEY' environment variable must be set
-* Docker must work
-* Ollama should be running on 'http://192.168.50.105:11434' (or adapt IP in 'config.yaml')
+* Docker should work
+* Ollama should be running on 'http://0.0.0.0:11434' (or adapt IP in 'config.yaml')
+* Open WebUI or LocalAI should be running at http://0.0.0.0:8080
+* LiteLLM Proxy Server should be running at http://0.0.0.0:4000
 * PDM is installed - or manually pip install pyproject.toml, run its '[tool.pdm.scripts]' and execute python scripts
 
-## Usage
+## Start servers
 
 Start LiteLLM in Docker with 'config.yaml':
 ```
@@ -17,15 +27,13 @@ pdm run docker
 ```
 Or just locally with:
 ```
-litellm --config ~/github/jensaug/litellm-test/config.yaml
+litellm --config config.yaml
 ```
 
-Call OpenAPI and Ollama through LiteLLM proxy using OpenAI python package:
+## Execute demo clients
+
+Choose which demo to run using PDM, e.g:
 ```
-pdm run test_litellm.py
-```
-Or call OpenAI and Ollama without LiteLLM proxy using LiteLLM python package:
-```
-pdm run test_local.py
+pdm run demo-ollama.py
 ```
 
